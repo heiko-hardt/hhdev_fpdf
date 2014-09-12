@@ -1,4 +1,7 @@
 <?php
+namespace HeikoHardt\HhdevFpdf;
+
+
 /*******************************************************************************
  * FPDF                                                                         *
  *                                                                              *
@@ -6,10 +9,10 @@
  * Date:    2011-06-18                                                          *
  * Author:  Olivier PLATHEY                                                     *
  *******************************************************************************/
+class Fpdf {
 
-define('FPDF_VERSION', '1.7');
+	const FPDF_VERSION = '1.7';
 
-class FPDF {
 	var $page; // current page number
 	var $n; // current object number
 	var $offsets; // array of object offsets
@@ -72,7 +75,7 @@ class FPDF {
 	 *                               Public methods                                 *
 	 *                                                                              *
 	 *******************************************************************************/
-	function FPDF($orientation = 'P', $unit = 'mm', $size = 'A4') {
+	function __construct($orientation = 'P', $unit = 'mm', $size = 'A4') {
 		// Some checks
 		$this->_dochecks();
 		// Initialization of properties
@@ -106,6 +109,8 @@ class FPDF {
 				$this->fontpath .= '/';
 		} elseif (is_dir(dirname(__FILE__) . '/font'))
 			$this->fontpath = dirname(__FILE__) . '/font/';
+		elseif (is_dir(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("ppk_fpdf", 'Ressources/Public/Fonts/')))
+			$this->fontpath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("ppk_fpdf", 'Ressources/Public/Fonts/');
 		else
 			$this->fontpath = '';
 		// Core fonts
