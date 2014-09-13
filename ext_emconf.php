@@ -1,9 +1,9 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'FPDF',
-	'description' => 'Zusammenführung der FDF und FPDi Framework',
-	'category' => 'templates',
+	'title' => 'FPDF Library',
+	'description' => 'Provides FPDF Library (www.fpdf.org / v.1.7) for TYPO3 > 6.1',
+	'category' => 'misc',
 	'author' => 'Heiko Hardt',
 	'author_email' => 'heiko.hardt@pixelpark.com',
 	'state' => 'beta',
@@ -11,10 +11,10 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 1,
-	'version' => '1.7.0',
+	'version' => '0.1.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.1'
+			'typo3' => '6.1.0-6.2.99',
 		),
 		'conflicts' => array(),
 		'suggests' => array(),
