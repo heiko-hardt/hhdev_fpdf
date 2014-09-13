@@ -109,8 +109,8 @@ class Fpdf {
 				$this->fontpath .= '/';
 		} elseif (is_dir(dirname(__FILE__) . '/font'))
 			$this->fontpath = dirname(__FILE__) . '/font/';
-		elseif (is_dir(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("ppk_fpdf", 'Ressources/Public/Fonts/')))
-			$this->fontpath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("ppk_fpdf", 'Ressources/Public/Fonts/');
+		elseif (is_dir(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("hhdev_fpdf", 'Ressources/Public/Fonts/')))
+			$this->fontpath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath("hhdev_fpdf", 'Ressources/Public/Fonts/');
 		else
 			$this->fontpath = '';
 		// Core fonts
