@@ -1521,7 +1521,7 @@ class Fpdf {
 	}
 
 	function _putinfo() {
-		$this->_out('/Producer ' . $this->_textstring('FPDF ' . FPDF_VERSION));
+		$this->_out('/Producer ' . $this->_textstring('FPDF ' . constant("self::FPDF_VERSION")));
 		if (!empty($this->title))
 			$this->_out('/Title ' . $this->_textstring($this->title));
 		if (!empty($this->subject))
