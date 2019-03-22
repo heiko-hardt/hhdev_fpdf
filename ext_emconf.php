@@ -5,7 +5,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Provides FPDF Library (www.fpdf.org / v.1.7) for TYPO3 > 6.1',
 	'category' => 'misc',
 	'author' => 'Heiko Hardt',
-	'author_email' => 'heiko.hardt@pixelpark.com',
+	'author_email' => 'typo3.heiko@hardt.me',
 	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => '0',
@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '0.1.4',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.1.0-6.2.99',
+			'typo3' => '6.1.0-9.5.99',
 		),
 		'conflicts' => array(),
 		'suggests' => array(),
